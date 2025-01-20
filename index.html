@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마켓</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logo.png" alt="중고마켓 로고">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">중고상품</a></li>
+                <li><a href="#">채팅</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="auth-buttons">
+            <button class="login-btn">로그인</button>
+            <button class="register-btn">회원가입</button>
+        </div>
+    </header>
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="검색어를 입력하세요">
+                <button class="search-btn">검색</button>
+            </div>
+            
+            <div class="category-filter">
+                <button class="category-btn active">전체</button>
+                <button class="category-btn">의류</button>
+                <button class="category-btn">전자기기</button>
+                <button class="category-btn">가구</button>
+                <button class="category-btn">도서</button>
+            </div>
+        </section>
+
+        <section class="product-section">
+            <h2>상품목록</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="images/product1.jpg" alt="상품1">
+                    <h3>상품1</h3>
+                    <p>가격: 10,000원</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/product2.jpg" alt="상품2">
+                    <h3>상품2</h3>
+                    <p>가격: 20,000원</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/product3.jpg" alt="상품3">
+                    <h3>아이폰15</h3>
+                    <p>가격: 30,000원</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cart-modal" id="cartModal">
+            <div class="cart-modal-content">
+                <div class="cart-header">
+                    <h2>장바구니</h2>
+                    <button class="close-cart">&times;</button>
+                </div>
+                <div class="cart-items">
+
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        총 금액: <span id="cartTotal">0원</span>
+                    </div>
+                    <button class="checkout-btn">결제하기</button>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="shipping-modal" id="shippingModal">
+            <div class="shipping-modal-content">
+                <div class="shipping-header">
+                    <h2>배송 정보 입력</h2>
+                    <button class="close-shipping">&times;</button>
+                </div>
+                <form id="shippingForm">
+                    <div class="form-group">
+                        <label for="receiverName">받는 사람</label>
+                        <input type="text" id="receiverName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="receiverPhone">연락처</label>
+                        <input type="tel" id="receiverPhone" placeholder="010-0000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="receiverAddress">주소</label>
+                        <input type="text" id="receiverAddress" required>
+                    </div>
+                    <button type="submit" class="submit-shipping">결제하기</button>
+                </form>
+            </div>
+        </div>
+    </main>
+  
+    <footer>
+        <p>&copy; 2025 중고마켓. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
